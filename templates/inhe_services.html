@@ -1,0 +1,57 @@
+{% extends 'bases.html' %}
+{% load staticfiles %}
+<html>
+<head>
+    {% block title %}
+    <title> Services </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    {% endblock %}
+</head>
+<body>
+{% block content %}
+    <style>
+    table,th{text-align: center;}
+    th{font-size: 20px;background-color: yellow}
+    h3{font-size: 40px;color: deeppink}
+    table{background-color: lightgreen}
+
+    </style>
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8">
+            {% if data %}
+            <h3 style="text-align: center"><b>We Will Provide Below Services..</b></h3><br>
+            <table class="table table-bordered  table-hover">
+            <thead class="table-dark">
+            <tr>
+                <th>Course Id</th>
+                <th>Course Name</th>
+                <th>Trainer</th>
+                <th>Course Duration</th>
+                <th>Course Content</th>
+            </tr>
+                </thead>
+            <tbody>
+               {% for i in data %}
+                  <tr>}
+                    <td>{{i.Course_id}}</td>
+                    <td>{{i.Course_name}}</td>
+                    <td>{{i.Faculty}}</td>
+                    <td>{{i.Duration}}</td>
+                    <td>
+                        <a href="{{i.course_content.url}}"class="btn btn-primary">download</a></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+            </table>
+            {% endif %}
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+</body>
+</html>

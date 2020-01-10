@@ -1,0 +1,55 @@
+<html>
+<head>
+     {% block title %}
+     <title> DjangoSoft</title>
+          <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+     {% endblock %}
+</head>
+<style>
+    .jumbotron{padding: 10px;position: center;
+    border:solid orange 2px}
+    nav{float:right;
+    }
+    button{margin-right: 50px;
+    font-size: 20px;
+    background-color: lightcyan;
+    }
+    a{text-decoration: none}
+    body{margin: 30px;
+    background-color: lightcyan;
+    border:lightgray 1px solid;
+    }
+    #h32 b{ text-align:right;color:red;background-color: cyan;
+    font-size:50px;padding:0px 10px ;border-radius: 10px;text-align: center}
+    footer{
+        position: fixed;
+        bottom: 0px;
+        text-align: center;
+    }
+</style>
+<body>
+<div class="jumbotron">
+<nav>
+    <button><a href="/home/">home</a></button>
+    <button> <a href="/contact/">contact</a></button>
+    <button> <a href="/services/">services</a></button>
+    <button> <a href="/gallery/">gallery</a></button>
+    <button><a href="/feedbacks/">feedbacks</a></button>
+</nav>
+<br><br>
+    <h1 align="center" id="h32" style="..."><b> DJANGO SOFT SOLUTION </b>  </h1>
+</div>
+{% block response %}
+{% endblock %}
+
+{%block content%}
+{%endblock%}
+<b><footer> Plot No:404,IInd Floor,Ameerpet,Hyderabad-50038,Mobile: 7582076953</footer></b>
+</body>
+</html>
